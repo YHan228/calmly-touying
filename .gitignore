@@ -1,0 +1,83 @@
+# =============================================================================
+# Warm Amber Theme - .gitignore
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Private Content (not part of public template)
+# -----------------------------------------------------------------------------
+
+# Personal presentation files
+main.typ
+main.pdf
+appendix.typ
+appendix.pdf
+
+# Personal figures and assets
+figures/
+
+# Thesis/research files
+thesis/
+
+# Plotting and analysis code
+plot_codes/
+
+# Personal assets (keep folder but ignore contents)
+assets/*
+!assets/.gitkeep
+
+# -----------------------------------------------------------------------------
+# Build Output
+# -----------------------------------------------------------------------------
+
+# Compiled PDFs (users should compile themselves)
+*.pdf
+
+# But keep example PDFs for preview (optional - remove if you want users to compile)
+!examples/*.pdf
+
+# -----------------------------------------------------------------------------
+# Typst & Editor
+# -----------------------------------------------------------------------------
+
+# Typst cache
+.typst-cache/
+
+# VS Code
+.vscode/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+\#*\#
+.#*
+
+# -----------------------------------------------------------------------------
+# OS Files
+# -----------------------------------------------------------------------------
+
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# -----------------------------------------------------------------------------
+# Development & Local
+# -----------------------------------------------------------------------------
+
+.env
+.local/
+.claude/
+
+# -----------------------------------------------------------------------------
+# Misc
+# -----------------------------------------------------------------------------
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Log files
+*.log
