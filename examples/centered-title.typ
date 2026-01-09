@@ -3,7 +3,7 @@
 // See feature-showcase.typ for complete feature documentation
 #import "../theme/theme.typ": *
 
-#show: warm-amber-theme.with(
+#show: calmly.with(
   config-info(
     title: [Centered Title Layout],
     subtitle: [Alternative Title Slide Design],

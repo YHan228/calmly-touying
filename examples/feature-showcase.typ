@@ -1,5 +1,5 @@
 // Feature Showcase - Complete Theme Documentation
-// Demonstrates ALL features of the Warm Amber Theme
+// Demonstrates ALL features of the Calmly Theme
 #import "../theme/theme.typ": *
 
 // =============================================================================
@@ -10,7 +10,7 @@
 // variant: "light" (default), "dark"
 //   Controls light/dark mode
 //
-// colortheme: "warm-amber" (default), "tomorrow", "paper"
+// colortheme: "tomorrow" (default), "warm-amber", "paper"
 //   Three distinct color palettes
 //
 // progressbar: "foot" (default), "head", "frametitle", "none"
@@ -23,16 +23,16 @@
 // title-layout: "moloch" (default), "centered", "split"
 //   Layout variant for title slide
 
-#show: warm-amber-theme.with(
+#show: calmly.with(
   config-info(
-    title: [Warm Amber Theme],
+    title: [Calmly Theme],
     subtitle: [Complete Feature Showcase],
     author: [Theme Documentation],
     date: datetime.today(),
     institution: [All Features Demonstrated],
   ),
   variant: "light",
-  colortheme: "warm-amber",
+  colortheme: "tomorrow",
   progressbar: "foot",
   header-style: "moloch",
 )
@@ -427,7 +427,7 @@ $ integral_0^infinity e^(-x^2) dif x = sqrt(pi) / 2 $
     [*Option*], [*Values*], [*Description*]
   ),
   [`variant`], [`"light"`, `"dark"`], [Color mode],
-  [`colortheme`], [`"warm-amber"`, `"tomorrow"`, `"paper"`], [Color palette],
+  [`colortheme`], [`"tomorrow"`, `"warm-amber"`, `"paper"`], [Color palette (tomorrow default)],
   [`progressbar`], [`"foot"`, `"head"`, `"frametitle"`, `"none"`], [Progress bar position],
   [`header-style`], [`"moloch"`, `"minimal"`], [Slide header style],
   [`title-layout`], [`"moloch"`, `"centered"`, `"split"`], [Title slide layout],

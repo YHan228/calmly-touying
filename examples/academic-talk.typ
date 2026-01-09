@@ -2,11 +2,11 @@
 // A realistic research presentation structure with citations
 #import "../theme/theme.typ": *
 
-#show: warm-amber-theme.with(
+#show: calmly.with(
   config-info(
-    title: [Efficient Neural Architecture Search via Gradient-Based Optimization],
-    subtitle: [NeurIPS 2024],
-    author: [Jane Smith],
+    title: [Efficient Academic Talk],
+    subtitle: [NeurIPS 2099],
+    author: [Jane Musterfrau],
     date: datetime.today(),
     institution: [Department of Computer Science \
     University of Example
@@ -38,7 +38,7 @@
 #only(1)[
   #align(center)[
     Manual architecture design is:
-    - Time-consuming (weeks to months)
+    - Time-consuming (weeks to months) @smith2023
     - Requires deep expertise
     - Often suboptimal
   ]

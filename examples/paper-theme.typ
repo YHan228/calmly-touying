@@ -3,7 +3,7 @@
 // See feature-showcase.typ for complete feature documentation
 #import "../theme/theme.typ": *
 
-#show: warm-amber-theme.with(
+#show: calmly.with(
   config-info(
     title: [Paper Theme Demo],
     subtitle: [High Contrast Academic Style],
