@@ -6,11 +6,11 @@
 # Private Content (not part of public template)
 # -----------------------------------------------------------------------------
 
-# Personal presentation files
-main.typ
-main.pdf
-appendix.typ
-appendix.pdf
+# Personal presentation files (root level only)
+/main.typ
+/main.pdf
+/appendix.typ
+/appendix.pdf
 
 # Personal figures and assets
 figures/

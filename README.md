@@ -3,8 +3,40 @@
 A modern, minimalist presentation theme for [Touying](https://github.com/touying-typ/touying). Calm, approachable, and intelligent—designed to let your content shine.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Typst](https://img.shields.io/badge/typst-0.11+-blue.svg)
+![Typst](https://img.shields.io/badge/typst-0.12+-blue.svg)
 ![Touying](https://img.shields.io/badge/touying-0.6.1-orange.svg)
+
+## Installation
+
+### From Typst Universe (Recommended)
+
+Once published, you can use the template directly:
+
+```bash
+# Create a new presentation from template
+typst init @preview/calmly-touying:0.1.0 my-presentation
+cd my-presentation
+typst compile main.typ
+```
+
+Or import it in an existing project:
+
+```typst
+#import "@preview/calmly-touying:0.1.0": *
+```
+
+### Local Development
+
+1. Clone this repository
+2. Copy the package to your local Typst packages directory:
+   ```bash
+   # Linux/macOS
+   mkdir -p ~/.local/share/typst/packages/local/calmly-touying/0.1.0
+   cp -r * ~/.local/share/typst/packages/local/calmly-touying/0.1.0/
+
+   # Then import as:
+   # #import "@local/calmly-touying:0.1.0": *
+   ```
 
 ## Features
 
@@ -20,7 +52,7 @@ A modern, minimalist presentation theme for [Touying](https://github.com/touying
 ## Quick Start
 
 ```typst
-#import "theme/theme.typ": *
+#import "@preview/calmly-touying:0.1.0": *
 
 #show: calmly.with(
   config-info(
@@ -78,16 +110,6 @@ The theme supports extensive customization through configuration options:
 - **Tomorrow** (default): Programmer-friendly palette based on Tomorrow theme. Balanced colors.
 - **Warm Amber**: Soft, warm tones with amber accents. Premium, modern feel.
 - **Paper**: High contrast black/white with blue accents. Academic style.
-
-## Installation
-
-1. Clone this repository or copy the `theme/` folder to your project
-2. Import the theme in your main Typst file
-3. Ensure you have [Touying 0.6.1](https://typst.app/universe/package/touying) available
-
-```bash
-git clone https://github.com/YHan228/calmly-touying.git
-```
 
 ## Slide Types
 
@@ -377,15 +399,21 @@ The `examples/` directory contains several templates:
 ## File Structure
 
 ```
-calmly/
+calmly-touying/
+├── typst.toml              # Package manifest
+├── lib.typ                 # Package entrypoint
+├── LICENSE                 # MIT License
+├── README.md
+├── thumbnail.png           # Package thumbnail (for Universe listing)
 ├── theme/
-│   ├── theme.typ           # Main entry point
+│   ├── theme.typ           # Main theme configuration
 │   ├── colors.typ          # Color palettes (3 themes × 2 variants)
 │   ├── typography.typ      # Font settings and spacing
 │   ├── components.typ      # Reusable components (30+)
 │   └── slides.typ          # Slide type definitions
-├── examples/               # Example presentations
-└── README.md
+├── template/               # Starter template (for typst init)
+│   └── main.typ            # Template entry point
+└── examples/               # Example presentations
 ```
 
 ## Building
