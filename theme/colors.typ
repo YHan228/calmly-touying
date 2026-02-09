@@ -288,6 +288,89 @@
   header-text: rgb("#0A0A0A"),
 )
 
+// Dracula theme - Light variant
+#let dracula-light = (
+  accent-primary: rgb("#BD93F9"),
+  accent-secondary: rgb("#FF79C6"),
+  accent-subtle: rgb("#F8F8F2"),
+  accent-glow: rgb("#8BE9FD"),
+  accent-deep: rgb("#6272A4"),
+
+  bg-base: rgb("#F8F8F2"),
+  bg-elevated: rgb("#FFFFFF"),
+  bg-muted: rgb("#F0F0EB"),
+  bg-surface: rgb("#E8E8E3"),
+  bg-wash: rgb("#F5F5F0"),
+
+  text-primary: rgb("#282A36"),
+  text-secondary: rgb("#44475A"),
+  text-muted: rgb("#6272A4"),
+  text-light: rgb("#9090A0"),
+  text-subtle: rgb("#7575A0"),
+
+  border-subtle: rgb("#E0E0D8"),
+  border-soft: rgb("#D0D0C8"),
+  border-medium: rgb("#B0B0A8"),
+  progress-track: rgb("#E0E0D8"),
+
+  alert-bg: rgb("#FFF0F0"),
+  alert-border: rgb("#FF5555"),
+  alert-text: rgb("#FF5555"),
+  example-bg: rgb("#F0FFF4"),
+  example-border: rgb("#50FA7B"),
+  example-text: rgb("#50FA7B"),
+
+  focus-bg: rgb("#BD93F9"),
+  focus-text: rgb("#282A36"),
+
+  standout-bg: rgb("#FF79C6"),
+  standout-text: rgb("#282A36"),
+
+  header-bg: rgb("#BD93F9"),
+  header-text: rgb("#282A36"),
+)
+
+// Dracula theme - Dark variant
+#let dracula-dark = (
+  accent-primary: rgb("#BD93F9"),
+  accent-secondary: rgb("#FF79C6"),
+  accent-subtle: rgb("#44475A"),
+  accent-glow: rgb("#8BE9FD"),
+  accent-deep: rgb("#6272A4"),
+
+  bg-base: rgb("#282A36"),
+  bg-elevated: rgb("#343746"),
+  bg-muted: rgb("#21222C"),
+  bg-surface: rgb("#3A3C4E"),
+  bg-wash: rgb("#2E303E"),
+
+  text-primary: rgb("#F8F8F2"),
+  text-secondary: rgb("#E0E0E0"),
+  text-muted: rgb("#BFBFBF"),
+  text-light: rgb("#6272A4"),
+  text-subtle: rgb("#7580A0"),
+
+  border-subtle: rgb("#44475A"),
+  border-soft: rgb("#4A4D5E"),
+  border-medium: rgb("#6272A4"),
+  progress-track: rgb("#44475A"),
+// Red background
+  alert-border: rgb("#FF5555"),
+  alert-text: rgb("#FF6E6E"),
+  example-bg: rgb("#253D2A"),
+  example-border: rgb("#50FA7B"),
+  example-text: rgb("#69FF94"),
+
+  focus-bg: rgb("#BD93F9"),
+  focus-text: rgb("#282A36"),
+
+  standout-bg: rgb("#FF79C6"),
+  standout-text: rgb("#282A36"),
+
+  header-bg: rgb("#BD93F9"),
+  header-text: rgb("#282A36"),
+)
+
 // =============================================================================
 // COLOR GETTER SYSTEM
 // =============================================================================
@@ -298,6 +381,7 @@
     "warm-amber": (light: warm-amber-light, dark: warm-amber-dark),
     "tomorrow": (light: tomorrow-light, dark: tomorrow-dark),
     "paper": (light: paper-light, dark: paper-dark),
+    "dracula": (light: dracula-light, dark: dracula-dark),
   )
 
   let selected-theme = themes.at(theme, default: themes.warm-amber)
