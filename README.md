@@ -15,7 +15,7 @@ Use the template directly:
 
 ```bash
 # Create a new presentation from template
-typst init @preview/calmly-touying:0.1.0 my-presentation
+typst init @preview/calmly-touying:0.2.0 my-presentation
 cd my-presentation
 typst compile main.typ
 ```
@@ -23,7 +23,7 @@ typst compile main.typ
 Or import it in an existing project:
 
 ```typst
-#import "@preview/calmly-touying:0.1.0": *
+#import "@preview/calmly-touying:0.2.0": *
 ```
 
 ### Local Development
@@ -32,11 +32,11 @@ Or import it in an existing project:
 2. Copy the package to your local Typst packages directory:
    ```bash
    # Linux/macOS
-   mkdir -p ~/.local/share/typst/packages/local/calmly-touying/0.1.0
-   cp -r * ~/.local/share/typst/packages/local/calmly-touying/0.1.0/
+   mkdir -p ~/.local/share/typst/packages/local/calmly-touying/0.2.0
+   cp -r * ~/.local/share/typst/packages/local/calmly-touying/0.2.0/
 
    # Then import as:
-   # #import "@local/calmly-touying:0.1.0": *
+   # #import "@local/calmly-touying:0.2.0": *
    ```
 
 ## Features
@@ -53,7 +53,7 @@ Or import it in an existing project:
 ## Quick Start
 
 ```typst
-#import "@preview/calmly-touying:0.1.0": *
+#import "@preview/calmly-touying:0.2.0": *
 
 #show: calmly.with(
   config-info(

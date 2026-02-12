@@ -3,7 +3,7 @@
 //
 // Documentation: https://github.com/YHan228/calmly-touying
 
-#import "@preview/calmly-touying:0.1.0": *
+#import "@preview/calmly-touying:0.2.0": *
 
 // Configure your presentation
 #show: calmly.with(
@@ -16,15 +16,11 @@
   ),
   // Theme options (all optional):
   // variant: "light",        // "light" | "dark"
-  // colortheme: "tomorrow",  // "tomorrow" | "warm-amber" | "paper"
+  // colortheme: "tomorrow",  // "tomorrow" | "warm-amber" | "paper" | "dracula"
   // progressbar: "foot",     // "foot" | "head" | "frametitle" | "none"
   // header-style: "moloch",  // "moloch" | "minimal"
   // title-layout: "moloch",  // "moloch" | "centered" | "split"
 )
-
-// =============================================================================
-// Title Slide
-// =============================================================================
 
 #title-slide()
 
@@ -32,86 +28,161 @@
 // Introduction
 // =============================================================================
 
-== Welcome
+#section-slide[Introduction]
 
-This is a presentation created with *Calmly-Touying*.
+== Motivation
 
-- Clean, modern design
-- Multiple color themes
-- Rich component library
+#highlight-box(title: "Research Question")[
+  What problem are you solving, and why does it matter?
+]
 
-#pause
+#v(0.8em)
 
-Use `#pause` to reveal content progressively.
+- Provide context and background
+- State the gap in existing work
+- #alert[Highlight] the key challenge
 
-== Key Features
+#v(1fr)
+
+== Approach
+
+#v(1fr)
 
 #two-col(
   [
-    *Layout*
-    - Light and dark variants
-    - Three color themes
-    - Moloch-style headers
+    #alert-box(title: "Existing Methods")[
+      Describe limitations of prior approaches.
+    ]
   ],
   [
-    *Components*
-    - Highlight boxes
-    - Alert and example boxes
-    - Citation gadgets
+    #example-box(title: "Our Contribution")[
+      Explain what your work adds.
+    ]
   ],
 )
 
+#v(2fr)
+
 // =============================================================================
-// Content Examples
+// Methods
 // =============================================================================
 
-#focus-slide[
-  Main Section
+#section-slide[Methods]
+
+== Algorithm
+
+Code blocks get automatic syntax highlighting matched to your color theme:
+
+```python
+def gradient_descent(f, x0, lr=0.01):
+    x = x0
+    for _ in range(1000):
+        x -= lr * grad(f, x)
+    return x
+```
+
+#themed-block(title: "Complexity")[
+  Time: $O(n dot T)$ where $T$ is the number of iterations.
 ]
 
-== Box Components
+== Pseudocode
 
-#highlight-box(title: "Key Point")[
-  Use highlight boxes to emphasize important information.
+#algorithm-box(title: "Algorithm 1: Gradient Descent")[
+  *Input:* Function $f$, initial point $x_0$, learning rate $eta$ \
+  *Output:* Approximate minimizer $x^*$
+
+  1: $x <- x_0$ \
+  2: *for* $t = 1, 2, dots, T$ *do* \
+  3: #h(1em) $g <- nabla f(x)$ \
+  4: #h(1em) $x <- x - eta dot g$ \
+  5: *end for* \
+  6: *return* $x$
 ]
 
-#v(1em)
+#v(1fr)
 
-#example-box(title: "Example")[
-  This is an example box for demonstrations.
-]
+== Formulation
 
-== Multi-Column Layout
+#v(1fr)
 
-#three-col(
+#two-col(
   [
-    *Column 1*
+    The objective function:
 
-    First point here.
+    $ min_theta L(theta) = -1/n sum_(i=1)^n log p(x_i | theta) $
   ],
   [
-    *Column 2*
+    *Key variables*
 
-    Second point here.
-  ],
-  [
-    *Column 3*
-
-    Third point here.
+    - $theta$ --- model parameters
+    - $x_i$ --- observed data points
+    - $n$ --- sample size
   ],
 )
+
+#v(2fr)
+
+// =============================================================================
+// Results
+// =============================================================================
+
+#section-slide(show-progress: true)[Results]
+
+== Comparison
+
+#v(1fr)
+
+#table(
+  columns: (1fr, auto, auto, auto),
+  stroke: 0.5pt + luma(200),
+  inset: 8pt,
+  table.header(
+    [*Method*], [*Precision*], [*Recall*], [*F1*],
+  ),
+  [Baseline], [0.72], [0.68], [0.70],
+  [Improved], [0.85], [0.81], [0.83],
+  [*Ours*], [*0.91*], [*0.89*], [*0.90*],
+)
+
+#v(2fr)
 
 // =============================================================================
 // Conclusion
 // =============================================================================
 
+// Use #focus-slide for high-impact statements:
+// #focus-slide[Key Takeaway Message]
+
+#section-slide[Conclusion]
+
 == Summary
 
-#alert-box(title: "Remember")[
-  - Customize colors with `colortheme`
-  - Switch to dark mode with `variant: "dark"`
-  - Use `#focus-slide` for emphasis
+#three-col(
+  [
+    *Problem*
+
+    Clearly defined the research gap.
+  ],
+  [
+    *Method*
+
+    Proposed a novel approach with formal guarantees.
+  ],
+  [
+    *Result*
+
+    Achieved state-of-the-art on standard benchmarks.
+  ],
+)
+
+#v(1em)
+
+#alert-box(title: "Future Work")[
+  - Extend to larger-scale datasets
+  - Explore alternative architectures
 ]
+
+#v(1fr)
 
 #ending-slide(
   title: [Thank You],

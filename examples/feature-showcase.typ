@@ -10,8 +10,8 @@
 // variant: "light" (default), "dark"
 //   Controls light/dark mode
 //
-// colortheme: "tomorrow" (default), "warm-amber", "paper"
-//   Three distinct color palettes
+// colortheme: "tomorrow" (default), "warm-amber", "paper", "dracula"
+//   Four distinct color palettes
 //
 // progressbar: "foot" (default), "head", "frametitle", "none"
 //   Position of the progress indicator
@@ -110,6 +110,30 @@ The theme provides several text helpers:
   4: *end for* \
   5: *return* $y / n$
 ]
+
+== Code Blocks
+
+Code blocks get automatic syntax highlighting that matches your selected color theme:
+
+```python
+def quicksort(arr: list[int]) -> list[int]:
+    """Sort a list using the quicksort algorithm."""
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[len(arr) // 2]
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+    return quicksort(left) + middle + quicksort(right)
+```
+
+Typst code is highlighted too:
+
+```typst
+#let greet(name) = {
+  [Hello, #name! Welcome to *Calmly-Touying*.]
+}
+```
 
 // =============================================================================
 // SECTION 2: Layouts
@@ -427,7 +451,7 @@ $ integral_0^infinity e^(-x^2) dif x = sqrt(pi) / 2 $
     [*Option*], [*Values*], [*Description*]
   ),
   [`variant`], [`"light"`, `"dark"`], [Color mode],
-  [`colortheme`], [`"tomorrow"`, `"warm-amber"`, `"paper"`], [Color palette (tomorrow default)],
+  [`colortheme`], [`"tomorrow"`, `"warm-amber"`, `"paper"`, `"dracula"`], [Color palette (tomorrow default)],
   [`progressbar`], [`"foot"`, `"head"`, `"frametitle"`, `"none"`], [Progress bar position],
   [`header-style`], [`"moloch"`, `"minimal"`], [Slide header style],
   [`title-layout`], [`"moloch"`, `"centered"`, `"split"`], [Title slide layout],
