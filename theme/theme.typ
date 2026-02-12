@@ -87,6 +87,21 @@
 #let make-gradients = make-gradients
 
 // =============================================================================
+// SYNTAX THEME MAPPING
+// =============================================================================
+
+#let _get-syntax-theme(colortheme, variant) = {
+  let themes = (
+    "tomorrow": (light: "syntax-themes/Tomorrow.tmTheme", dark: "syntax-themes/Tomorrow-Night.tmTheme"),
+    "warm-amber": (light: "syntax-themes/GitHub-Light.tmTheme", dark: "syntax-themes/Tomorrow-Night-Eighties.tmTheme"),
+    "paper": (light: "syntax-themes/GitHub-Light.tmTheme", dark: "syntax-themes/GitHub-Dark.tmTheme"),
+    "dracula": (light: "syntax-themes/Tomorrow.tmTheme", dark: "syntax-themes/Dracula.tmTheme"),
+  )
+  let t = themes.at(colortheme, default: themes.at("tomorrow"))
+  t.at(variant, default: t.at("light"))
+}
+
+// =============================================================================
 // MAIN THEME FUNCTION
 // =============================================================================
 
@@ -95,7 +110,7 @@
 /// Arguments:
 /// - aspect-ratio: "16-9" (default), "4-3"
 /// - variant: "light" (default), "dark"
-/// - colortheme: "tomorrow" (default), "warm-amber", "paper"
+/// - colortheme: "tomorrow" (default), "warm-amber", "paper", "dracula"
 /// - progressbar: "foot" (default), "head", "frametitle", "none"
 /// - header-style: "moloch" (default, colored bar), "minimal" (gradient underline)
 /// - title-layout: "moloch" (default), "centered", "split"
@@ -111,9 +126,10 @@
   ..args,
   body,
 ) = {
-  // Get colors for the selected theme and variant
+  // Get colors and syntax theme for the selected theme and variant
   let colors = get-theme-colors(theme: colortheme, variant: variant)
   let gradients = make-gradients(colors)
+  let syntax-theme-path = _get-syntax-theme(colortheme, variant)
 
   // Create the slide function with theme colors baked in
   let themed-slide(
@@ -216,8 +232,8 @@
         // Subtle link styling
         show link: it => text(fill: c.accent-primary, weight: "medium")[#it]
 
-        // Refined code styling
-        set raw(theme: none)
+        // Refined code styling with per-theme syntax highlighting
+        set raw(theme: syntax-theme-path)
         show raw: set text(font: font-mono, size: size-code, fill: c.text-secondary)
         show raw.where(block: true): block.with(
           fill: c.bg-surface,
