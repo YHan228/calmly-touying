@@ -40,7 +40,7 @@ Or import it in an existing project:
 
 ## Features
 
-- **Three Color Themes**: Tomorrow, Warm Amber, and Paper palettes
+- **Four Color Themes**: Tomorrow, Warm Amber, Paper, and Dracula palettes
 - **Light/Dark Variants**: Adapt to different venues and preferences
 - **Moloch-Inspired Design**: Clean headers, progress bars, and academic styling
 - **Multiple Slide Types**: Title, content, focus, standout, section, figure, equation, and more
@@ -90,7 +90,7 @@ The theme supports extensive customization through configuration options:
 #show: calmly.with(
   config-info(...),
   variant: "light",           // "light" | "dark"
-  colortheme: "tomorrow",     // "tomorrow" | "warm-amber" | "paper"
+  colortheme: "tomorrow",     // "tomorrow" | "warm-amber" | "paper" | "dracula"
   progressbar: "foot",        // "foot" | "head" | "frametitle" | "none"
   header-style: "moloch",     // "moloch" | "minimal"
   title-layout: "moloch",     // "moloch" | "centered" | "split"
@@ -100,7 +100,7 @@ The theme supports extensive customization through configuration options:
 | Option | Values | Description |
 |--------|--------|-------------|
 | `variant` | `"light"`, `"dark"` | Color mode for the presentation |
-| `colortheme` | `"tomorrow"`, `"warm-amber"`, `"paper"` | Color palette (tomorrow is default) |
+| `colortheme` | `"tomorrow"`, `"warm-amber"`, `"paper"`, `"dracula"` | Color palette (tomorrow is default) |
 | `progressbar` | `"foot"`, `"head"`, `"frametitle"`, `"none"` | Progress bar position |
 | `header-style` | `"moloch"`, `"minimal"` | Slide header style (colored bar vs underline) |
 | `title-layout` | `"moloch"`, `"centered"`, `"split"` | Title slide layout variant |
@@ -110,6 +110,7 @@ The theme supports extensive customization through configuration options:
 - **Tomorrow** (default): Programmer-friendly palette based on Tomorrow theme. Balanced colors.
 - **Warm Amber**: Soft, warm tones with amber accents. Premium, modern feel.
 - **Paper**: High contrast black/white with blue accents. Academic style.
+- **Dracula**: Purple and pink accents.
 
 ## Slide Types
 
@@ -407,7 +408,7 @@ calmly-touying/
 ├── thumbnail.png           # Package thumbnail (for Universe listing)
 ├── theme/
 │   ├── theme.typ           # Main theme configuration
-│   ├── colors.typ          # Color palettes (3 themes × 2 variants)
+│   ├── colors.typ          # Color palettes (4 themes × 2 variants)
 │   ├── typography.typ      # Font settings and spacing
 │   ├── components.typ      # Reusable components (30+)
 │   └── slides.typ          # Slide type definitions

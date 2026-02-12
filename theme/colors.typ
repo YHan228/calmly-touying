@@ -354,7 +354,8 @@
   border-soft: rgb("#4A4D5E"),
   border-medium: rgb("#6272A4"),
   progress-track: rgb("#44475A"),
-// Red background
+
+  alert-bg: rgb("#3A1F2A"),
   alert-border: rgb("#FF5555"),
   alert-text: rgb("#FF6E6E"),
   example-bg: rgb("#253D2A"),
