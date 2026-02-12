@@ -156,6 +156,24 @@ where $w^*(alpha) = arg min_w cal(L)_"train" (w, alpha)$
   citation: (bib-key: "liu2019darts", label: "Based on DARTS", position: "top-right"),
 )
 
+== Implementation
+
+```python
+def darts_step(model, arch_params, train_data, val_data, xi=0.01):
+    """One step of DARTS: bilevel optimization."""
+    # 1. Update weights on training data
+    w_loss = model.loss(train_data)
+    w_loss.backward()
+    optimizer_w.step()
+
+    # 2. Update architecture on validation data
+    a_loss = model.loss(val_data)
+    a_loss.backward()
+    optimizer_a.step()
+
+    return a_loss.item()
+```
+
 == Progressive Search Space Pruning
 
 #text(size: size-small, fill: text-muted)[Reducing complexity during search]

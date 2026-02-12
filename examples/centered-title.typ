@@ -63,6 +63,17 @@
   Combine with `header-style: "minimal"` for an extra-clean look.
 ]
 
+== Code Blocks
+
+```rust
+fn centered_layout(title: &str) -> Slide {
+    Slide::new()
+        .title(title)
+        .layout(Layout::Centered)
+        .build()
+}
+```
+
 #focus-slide[
   Content slides remain the same
 ]

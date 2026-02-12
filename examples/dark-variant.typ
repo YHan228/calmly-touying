@@ -70,6 +70,20 @@
   5: *end if*
 ]
 
+== Code in Dark Mode
+
+Syntax highlighting adapts to the dark palette:
+
+```python
+class DarkTheme:
+    bg = "#282a36"
+    fg = "#f8f8f2"
+
+    def apply(self, window):
+        window.set_colors(bg=self.bg, fg=self.fg)
+        return window.render()
+```
+
 #ending-slide(
   title: [Thank You],
   subtitle: [Dark mode complete],

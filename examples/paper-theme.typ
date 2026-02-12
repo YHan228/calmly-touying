@@ -76,6 +76,22 @@
   Paper theme provides maximum readability with clean, high-contrast styling.
 ]
 
+== Code Blocks
+
+High-contrast syntax highlighting for maximum readability:
+
+```java
+public class Paper {
+    private final String title;
+    private final List<String> authors;
+
+    public Paper(String title, List<String> authors) {
+        this.title = title;
+        this.authors = List.copyOf(authors);
+    }
+}
+```
+
 #focus-slide[
   Focus slides in paper theme
 ]
