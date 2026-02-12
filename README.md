@@ -396,6 +396,7 @@ The `examples/` directory contains several templates:
 | `academic-talk.typ` | Realistic research presentation |
 | `dark-variant.typ` | Dark mode example |
 | `paper-theme.typ` | Paper color theme |
+| `dracula-theme.typ` | Dracula color theme |
 | `centered-title.typ` | Centered title layout |
 
 ## File Structure
@@ -412,7 +413,8 @@ calmly-touying/
 │   ├── colors.typ          # Color palettes (4 themes × 2 variants)
 │   ├── typography.typ      # Font settings and spacing
 │   ├── components.typ      # Reusable components (30+)
-│   └── slides.typ          # Slide type definitions
+│   ├── slides.typ          # Slide type definitions
+│   └── syntax-themes/      # .tmTheme files for code syntax highlighting
 ├── template/               # Starter template (for typst init)
 │   └── main.typ            # Template entry point
 └── examples/               # Example presentations
