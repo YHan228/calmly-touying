@@ -28,16 +28,7 @@ Or import it in an existing project:
 
 ### Local Development
 
-1. Clone this repository
-2. Copy the package to your local Typst packages directory:
-   ```bash
-   # Linux/macOS
-   mkdir -p ~/.local/share/typst/packages/local/calmly-touying/0.2.0
-   cp -r * ~/.local/share/typst/packages/local/calmly-touying/0.2.0/
-
-   # Then import as:
-   # #import "@local/calmly-touying:0.2.0": *
-   ```
+For local development or contributing, see the [GitHub repository](https://github.com/YHan228/calmly-touying).
 
 ## Features
 
@@ -89,7 +80,10 @@ The theme supports extensive customization through configuration options:
 
 ```typst
 #show: calmly.with(
-  config-info(...),
+  config-info(
+    title: [Your Title],
+    author: [Your Name],
+  ),
   variant: "light",           // "light" | "dark"
   colortheme: "tomorrow",     // "tomorrow" | "warm-amber" | "paper" | "dracula"
   progressbar: "foot",        // "foot" | "head" | "frametitle" | "none"
@@ -242,7 +236,7 @@ Centered equation with definition box and optional citation:
 #themed-block(title: "Block Title")[
   General content.
 ]
-#themed-block(title: "Filled", fill-mode: "fill")[...]
+#themed-block(title: "Filled", fill-mode: "fill")[Filled background.]
 ```
 
 ### Algorithm Box
@@ -353,12 +347,12 @@ Reveal content progressively:
 | `size-caption` | 13pt |
 
 ### Golden Ratio Utilities
-```typst
-#phi                  // 1.618... constant
-#golden-major         // ~0.618 proportion
-#golden-minor         // ~0.382 proportion
-#golden-center(body)  // Vertically center with golden ratio offset
-```
+| Constant | Description |
+|----------|-------------|
+| `phi` | 1.618... golden ratio constant |
+| `golden-major` | ~0.618 proportion |
+| `golden-minor` | ~0.382 proportion |
+| `golden-center(body)` | Vertically center with golden ratio offset |
 
 ## Customization
 
@@ -401,7 +395,7 @@ The `examples/` directory contains several templates:
 
 ## File Structure
 
-```
+```text
 calmly-touying/
 ├── typst.toml              # Package manifest
 ├── lib.typ                 # Package entrypoint
