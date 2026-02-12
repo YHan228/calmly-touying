@@ -2,15 +2,16 @@
 
 A modern, minimalist presentation theme for [Touying](https://github.com/touying-typ/touying). Calm, approachable, and intelligent—designed to let your content shine.
 
+[![Typst Universe](https://img.shields.io/badge/Typst_Universe-calmly--touying-blue)](https://typst.app/universe/package/calmly-touying)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Typst](https://img.shields.io/badge/typst-0.12+-blue.svg)
 ![Touying](https://img.shields.io/badge/touying-0.6.1-orange.svg)
 
 ## Installation
 
-### From Typst Universe (Recommended)
+### From [Typst Universe](https://typst.app/universe/package/calmly-touying)
 
-Once published, you can use the template directly:
+Use the template directly:
 
 ```bash
 # Create a new presentation from template
