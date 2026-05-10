@@ -210,7 +210,7 @@
 
     // Use golden ratio or equal spacing
     if use-golden-ratio {
-      v(1fr * phi)
+      v(1fr * golden-ratio)
     } else {
       v(1fr)
     }
@@ -314,7 +314,7 @@
 
   let body = {
     // Golden ratio spacing above
-    v(1fr * phi)
+    v(1fr * golden-ratio)
 
     // Left-aligned title block
     set align(left)
@@ -633,7 +633,7 @@
 
   let content = {
     set align(center)
-    v(1fr * phi)
+    v(1fr * golden-ratio)
 
     text(
       size: size-title,
@@ -992,7 +992,7 @@
   let body = {
     set align(center)
 
-    v(1fr * phi)
+    v(1fr * golden-ratio)
 
     // Elegant title
     text(

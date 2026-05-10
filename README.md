@@ -349,7 +349,7 @@ Reveal content progressively:
 ### Golden Ratio Utilities
 | Constant | Description |
 |----------|-------------|
-| `phi` | 1.618... golden ratio constant |
+| `golden-ratio` | 1.618... golden ratio constant |
 | `golden-major` | ~0.618 proportion |
 | `golden-minor` | ~0.382 proportion |
 | `golden-center(body)` | Vertically center with golden ratio offset |
@@ -515,7 +515,7 @@ These functions wrap or extend Touying's base functionality:
 **Golden Ratio** (`typography.typ`):
 | Function | Description |
 |----------|-------------|
-| `phi` | Golden ratio constant (1.618...) |
+| `golden-ratio` | Golden ratio constant (1.618...) |
 | `golden-center()` | Golden-ratio vertical centering |
 | `golden-major` | ~0.618 proportion |
 | `golden-minor` | ~0.382 proportion |

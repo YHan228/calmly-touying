@@ -54,7 +54,8 @@
 #let cite-box = cite-box
 
 // Golden ratio utilities
-#let phi = phi
+// Renamed from `phi` to `golden-ratio` to avoid shadowing `sym.phi` in math mode.
+#let golden-ratio = golden-ratio
 #let golden-center = golden-center
 #let golden-major = golden-major
 #let golden-minor = golden-minor

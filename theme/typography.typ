@@ -7,11 +7,12 @@
 // =============================================================================
 
 // The golden ratio constant (φ ≈ 1.618)
-#let phi = 1.618033988749895
+// Named `golden-ratio` rather than `phi` to avoid shadowing `sym.phi` in math mode.
+#let golden-ratio = 1.618033988749895
 
 // Golden ratio spacing - mathematically pleasing proportions
 // Use for title pages and special layouts
-#let golden-space-above = 1fr * phi  // Larger space above
+#let golden-space-above = 1fr * golden-ratio  // Larger space above
 #let golden-space-below = 1fr        // Smaller space below
 
 // Golden ratio helper for vertical centering with offset
@@ -23,8 +24,8 @@
 }
 
 // Golden ratio proportions for layouts
-#let golden-major = phi / (1 + phi)  // ~0.618 (larger portion)
-#let golden-minor = 1 / (1 + phi)    // ~0.382 (smaller portion)
+#let golden-major = golden-ratio / (1 + golden-ratio)  // ~0.618 (larger portion)
+#let golden-minor = 1 / (1 + golden-ratio)             // ~0.382 (smaller portion)
 
 // Split layout using golden ratio (e.g., for title pages)
 #let golden-split-left = golden-minor * 100%   // ~38.2%
